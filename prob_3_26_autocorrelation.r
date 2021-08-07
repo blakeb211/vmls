@@ -26,7 +26,7 @@ ac <- function(z, tau) {
     sum <- sum + z[i]*z[i+tau]
   }
   sum / N
-  # my way of normalizing it so that exactly matching = 1 for all tau
+  # my way of normalizing it so that the peaks don't diminish with higher tau values.
   # sum / (N-tau) 
 }
 
