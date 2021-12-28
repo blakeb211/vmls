@@ -7,4 +7,4 @@ R script for calculating the autocorrelation function using z-scores. This techn
 ![autocorrelation plot](https://github.com/blakeb211/autocorrelation/blob/main/autocorrelation%20function.jpeg)
 
 ###### k-means clustering
-Julia Jupyter notebook showing k-means clustering
+Julia Jupyter notebook showing k-means clustering. This technique is used to group sets of data (encoded as "feature vectors") so that they can be inspected for insights. 
