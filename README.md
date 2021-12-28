@@ -3,7 +3,7 @@
 ## Contents
 
 ###### autocorrelation
-R script for calculating the autocorrelation function using z-scores. This technique can detect periodic trends in data. (Problem ref 3.26)
+R script for calculating the autocorrelation function using z-scores. This technique can detect periodic trends in data. (Problem 3.26)
 ![autocorrelation plot](https://github.com/blakeb211/autocorrelation/blob/main/autocorrelation%20function.jpeg)
 
 ###### k-means clustering
