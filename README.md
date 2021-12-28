@@ -9,6 +9,6 @@ R script for calculating the autocorrelation function using z-scores. This techn
 ###### k-means clustering
 Julia Jupyter notebook showing k-means clustering. This technique is used to group sets of data (encoded as "feature vectors") so that they can be inspected for insights. 
 
-PetalLength vs SepalLength for the RDatasets "iris" data set, showing the clusters found by k-means. See the Jupyter notebook for an additional plot showing how well the algorithm has "found" or "discovered" the species. (Spoiler: quite well)
+PetalLength vs SepalLength for the RDatasets "iris" data set, showing the clusters found by k-means. See my Jupyter notebook for an additional plot showing how well the algorithm has "found" or "discovered" the 3 species. (Spoiler: quite well)
 ![image](https://user-images.githubusercontent.com/20021147/147608211-b028759e-856d-4638-a4c0-18889cc027ba.png)
 
