@@ -27,12 +27,14 @@ angle(a1,a2)
 ```
 
 ## Problem and solution
-The inner product of the columns with themselves, $for\ i \neq j,\ a_ia_j = 1$,
-because all column vectors have Frobenius norm of 1. The problem states that 
+The problem states that all columns have a vector norm of 1, i.e.
+$for\ all\ i,\ a_i^{T}a_i = 1$. It also states that
 each column has an angle of 60 degrees with every other column, i.e.
-$for\ all\ i,\ a_i^Ta_i = cos(\pi/3)$.
+$for\ i \neq j,\ a_i^Ta_j = cos(\pi/3)$.
 
-**Describe the gram matrix of A**, $G = A^{T}A$.
+**Describe the gram matrix of A**, $G = A^{T}A$. The gram matrix describes, in
+a compact way, the value of the inner product for each pair of columns. 
+
 ```{r chnk2}
 G = diag(x=1,nrow=3,ncol=3)
 G[row(G) != col(G)] = cos(pi/3)
