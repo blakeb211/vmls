@@ -1,0 +1,40 @@
+---
+title: "Gram Matrix. Problem 10.14"
+author: "Blake Baird"
+date: "2/16/2022"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Functions and their examples
+```{r chnk1}
+library(magrittr)
+
+vnorm = function(x) {
+  # euclidean norm of vector
+  ( t(x) %*% x ) %>% sqrt
+}
+angle = function(x,y) acos(crossprod(x,y)/(vnorm(x) * vnorm(y))) * (180/pi)
+
+a1 = c(0,1,0,0.7)
+a2 = c(0.2,0,0,1.7805)
+vnorm(a1)
+vnorm(a2)
+angle(a1,a2)
+```
+
+## Problem and solution
+The inner product of the columns with themselves, $for\ i \neq j,\ a_ia_j = 1$,
+because all column vectors have Frobenius norm of 1. The problem states that 
+each column has an angle of 60 degrees with every other column, i.e.
+$for\ all\ i,\ a_i^Ta_i = cos(\pi/3)$.
+
+**Describe the gram matrix of A**, $G = A^{T}A$.
+```{r chnk2}
+G = diag(x=1,nrow=3,ncol=3)
+G[row(G) != col(G)] = cos(pi/3)
+G
+```
