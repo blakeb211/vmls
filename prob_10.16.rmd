@@ -44,6 +44,9 @@ vectors of the original matrix, $A$.
 
 The $\Sigma_{ij}$ terms are stdev($a_i$)stdev($a_j$)$\rho_{ij}$
 where $\rho_{ij}$ is the correlation between columns i and j.
+
+Thus, the covariance matrix contains the stdev of each column as well 
+as the correlation of all the column pairs.
 ```{r chnk4}
 library(magrittr) # import the pipe operator %>%
 
@@ -63,4 +66,18 @@ for(i in 1:4) stdev(A[,i])^2 %>% print
 rho12 = covar[1,2] / ( diag(covar)[2]^0.5 * diag(covar)[1]^0.5 )
 rho12
 stdev(A[,1])*stdev(A[,2])*rho12
+```
+
+The the de-meaned version of the column vector a, $\tilde{a}$, divided by std(a),
+gives the **standardized** version of a (aka **z-score**).
+
+$z = \frac{a-avg(a)1}{std(a)}$ 
+
+### d) Derive an expression for the z-score matrix, $Z = [z_{1}, ..., z_{k}]$
+
+$\tilde{A}$ is the de-meaned version of A. 
+
+```{r chnk5}
+std_a = matrix(sqrt(diag(covar)))
+one_over_std_a = 1/std_a
 ```
