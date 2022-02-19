@@ -77,7 +77,11 @@ $z = \frac{a-avg(a)1}{std(a)}$
 
 $\tilde{A}$ is the de-meaned version of A. 
 
+$Z = (A-1\mu^{T})\ diag(\frac{1}{std(a_{1})},\ ...\ ,\frac{1}{std(a_{k})})$
+
 ```{r chnk5}
 std_a = matrix(sqrt(diag(covar)))
 one_over_std_a = 1/std_a
+Z = Atilde %*% diag(as.vector(one_over_std_a),ncol=4,nrow=4)
+Z
 ```
